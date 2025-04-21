@@ -25,6 +25,9 @@ jobs:
           flutter create --platforms=web .
           flutter pub get
 
+      - name: Delete existing web icons
+        run: rm -rf web/icons
+
       - name: Clean and build Flutter Web with correct base href
         run: |
           flutter clean
