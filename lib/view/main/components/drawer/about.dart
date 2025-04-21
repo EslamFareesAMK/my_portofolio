@@ -15,10 +15,10 @@ class About extends StatelessWidget {
             const Spacer(flex: 2),
             const DrawerImage(),
             const Spacer(),
-            Text('Hamad Anwar', style: Theme.of(context).textTheme.titleSmall),
+            Text('Eslam Fareed', style: Theme.of(context).textTheme.titleSmall),
             const SizedBox(height: defaultPadding / 4),
             const Text(
-              'Flutter Developer & The Student of\nSoftware Engineering',
+              'Senior Flutter Developer & Instructor',
               textAlign: TextAlign.center,
               style: TextStyle(fontWeight: FontWeight.w200, height: 1.5),
             ),

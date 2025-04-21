@@ -26,8 +26,8 @@ class NavigationButtonList extends StatelessWidget {
                 },
                 text: 'Home',
               ),
-              if (!Responsive.isLargeMobile(context))
-                NavigationTextButton(onTap: () {}, text: 'About us'),
+              // if (!Responsive.isLargeMobile(context))
+              //   NavigationTextButton(onTap: () {}, text: 'About us'),
               NavigationTextButton(
                 onTap: () {
                   controller.animateToPage(
@@ -48,7 +48,7 @@ class NavigationButtonList extends StatelessWidget {
                 },
                 text: 'Certifications',
               ),
-              NavigationTextButton(onTap: () {}, text: 'Achievements'),
+              // NavigationTextButton(onTap: () {}, text: 'Achievements'),
             ],
           ),
         );
