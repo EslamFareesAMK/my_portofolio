@@ -14,6 +14,11 @@ jobs:
         with:
           flutter-version: '3.29.3'
 
+      - name: Regenerate web directory
+        run: |
+          rm -rf web
+          flutter create --platforms web .
+
       - name: Build Flutter Web with correct base href
         run: flutter build web --base-href /flutter/
 
