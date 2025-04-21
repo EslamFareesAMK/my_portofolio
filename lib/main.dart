@@ -1,21 +1,30 @@
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
+import '../res/constants.dart';
+import '../view/splash/splash_view.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
-  runApp(MyPortfolioApp());
+  runApp(const MyApp());
 }
 
-class MyPortfolioApp extends StatelessWidget {
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Eslam Fareed Portfolio',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: Colors.black,
-        textTheme: ThemeData.dark().textTheme.apply(fontFamily: 'Montserrat'),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        scaffoldBackgroundColor: bgColor,
+        useMaterial3: true,
+        textTheme: GoogleFonts.openSansTextTheme(Theme.of(context).textTheme)
+            .apply(bodyColor: Colors.white)
+            .copyWith(
+              bodyMedium: const TextStyle(color: bodyTextColor),
+              bodyLarge: const TextStyle(color: bodyTextColor),
+            ),
       ),
-      home: HomeScreen(),
+      home: SplashView(),
     );
   }
 }
